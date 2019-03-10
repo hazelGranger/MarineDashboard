@@ -1,12 +1,12 @@
 import { csvtojson } from '../utils/csvtojson'
 import { json } from './json'
 
-function deepObjectMerge(first, second) {
-    for (var key in second) {
-        first[key] = first[key] && first[key].toString() === "[object Object]" ?
-            deepObjectMerge(first[key], second[key]) : first[key] = second[key];
-    }
-    return first;
+const compare = (p) => {
+  return function(m, n) {
+    let a = m[p]
+    let b = n[p]
+    return a - b
+  }
 }
 
 export const allData = () => {
@@ -21,6 +21,5 @@ export const allData = () => {
       csv.push( Object.assign({ datetime: key }, jsonData[key]))
     }
   }
-  
   return csv
 }

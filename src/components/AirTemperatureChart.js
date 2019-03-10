@@ -1,7 +1,5 @@
 import React from 'react'
-
 import Typography from '@material-ui/core/Typography'
-
 import LineChart from './basic/LineChart'
 
 class AirTemperatureChart extends React.Component{
@@ -13,7 +11,7 @@ class AirTemperatureChart extends React.Component{
     ]
     return(
       <div>
-        <Typography variant="h6">Air Temperature</Typography>
+        <Typography variant="h6">Air Temperature at 2m above ground level</Typography>
         <LineChart
           height={500}
           data={data}

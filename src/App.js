@@ -36,21 +36,21 @@ class App extends Component {
     return (
       <div className="App">
         <main>
-          <Typography variant="h4">Marine Dashboard</Typography>
+          <Typography variant="h4" gutterBottom={16}>Marine Dashboard</Typography>
           <Grid container spacing={24}>
             <Grid item xs={12}>
               <Paper className={classes.paper}>
-                <WaveChart />
+                <WaveChart data={data} />
               </Paper>
             </Grid>
             <Grid item xs={12}>
               <Paper className={classes.paper}>
-                <WaterSpeedChart />
+                <WaterSpeedChart data={data} />
               </Paper>
             </Grid>
             <Grid item xs={12}>
               <Paper className={classes.paper}>
-                <WindChart />
+                <WindChart data={data} />
               </Paper>
             </Grid>
             <Grid item xs={12}>
